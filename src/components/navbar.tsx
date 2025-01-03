@@ -28,7 +28,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Switch } from "@/components/ui/switch" 
 import { ModeToggle } from "@/components/ui/mode-toggle"
-import { Product } from "@/types"
+// import { Product } from "@/types"
+import { useCart } from "@/context/CartContext"
 
 const NavItems = [
   { title: "Home", href: "/" },
@@ -36,10 +37,10 @@ const NavItems = [
   { title: "Wishlist", href: "/wishlist" },
 ]
 
-export function Navbar({ cart }: { cart: Product[] }) {
+export function Navbar() {
+	const { cart } = useCart();
 	const [isOpen, setIsOpen] = React.useState(false);
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const [cartItemCount, setCartItemCount] = React.useState(cart.length); // Example cart item count
+	// const [cartItemCount, setCartItemCount] = React.useState(cart.length); // Example cart item count
 
 	return (
 		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

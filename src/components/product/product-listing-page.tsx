@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import { useState } from "react";
 import {
 	Breadcrumb,
@@ -20,15 +19,10 @@ import { Button } from "@/components/ui/button";
 import { Home, Search, ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "@/components/product-card";
 import SidebarFilters from "@/components/sidebar-filters";
+import { useCart } from "@/context/CartContext";
+import { Product } from "@/types";
 
-interface Product {
-	id: string;
-	name: string;
-	price: number;
-	image: string;
-	color: string;
-	size: string;
-}
+
 
 // Dummy t-shirt products data
 const dummyProducts: Product[] = [
@@ -130,11 +124,9 @@ const dummyProducts: Product[] = [
 	},
 ];
 
-interface ProductListingPageProps {
-  onAddToCart: (product: Product) => void;
-}
 
-export default function ProductListingPage({ onAddToCart }: ProductListingPageProps) {
+
+export default function ProductListingPage() {
 	const [currentPage, setCurrentPage] = useState(1);
 	const productsPerPage = 8;
 	const totalPages = Math.max(
@@ -142,27 +134,14 @@ export default function ProductListingPage({ onAddToCart }: ProductListingPagePr
 		Math.ceil(dummyProducts.length / productsPerPage)
 	);
 
+	const { addToCart } = useCart();
+
 	const indexOfLastProduct = currentPage * productsPerPage;
 	const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 	const currentProducts = dummyProducts.slice(
 		indexOfFirstProduct,
 		indexOfLastProduct
 	);
-
-	/* const [cart, setCart] = useState<Product[]>([]);
-
-	const handleAddToCart = (productId: string) => {
-		const product = dummyProducts.find((p) => p.id === productId); // Find the product by ID
-		if (product) {
-			setCart((prevCart) => [...prevCart, product]); // Add to cart
-		}
-		console.log(`Added t-shirt ${productId} to cart`);
-	};
-
-	// useEffect to log the cart whenever it updates
-	useEffect(() => {
-		console.log("Cart updated:", cart);
-	}, [cart]); */
 
 	return (
 		<div className="container mx-auto px-4 py-8">
@@ -215,7 +194,7 @@ export default function ProductListingPage({ onAddToCart }: ProductListingPagePr
 							<ProductCard
 								key={product.id}
 								product={product}
-								onAddToCart={() => onAddToCart(product)}
+								onAddToCart={() => addToCart(product)}
 							/>
 						))}
 					</div>
