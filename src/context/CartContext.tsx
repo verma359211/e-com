@@ -1,6 +1,11 @@
-// src/context/CartContext.tsx
 "use client"
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+	createContext,
+	useContext,
+	useState,
+	useEffect,
+	ReactNode,
+} from "react";
 import { Product } from "@/types"; // Adjust the import path as necessary
 
 interface CartContextType {
@@ -22,27 +27,34 @@ export const useCart = () => {
 	return context;
 };
 
-// Define props for the CartProvider
 interface CartProviderProps {
-	children: ReactNode; // Allows children components to be passed
+	children: ReactNode;
 }
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-	const [cart, setCart] = useState<Product[]>([]);
+	const [cart, setCart] = useState<Product[]>(() => {
+		// Retrieve cart from localStorage
+		if (typeof window !== "undefined") {
+			const storedCart = localStorage.getItem("cart");
+			return storedCart ? JSON.parse(storedCart) : [];
+		}
+		return [];
+	});
+
+	// Persist cart to localStorage whenever it changes
+	useEffect(() => {
+		localStorage.setItem("cart", JSON.stringify(cart));
+	}, [cart]);
 
 	const addToCart = (product: Product) => {
-        setCart((prevCart) => [...prevCart, product]);
+		setCart((prevCart) => [...prevCart, product]);
 	};
 
 	const removeFromCart = (id: string) => {
-		setCart((prevCart) =>
-			prevCart.filter((item) => item.id !== id)
-		);
+		setCart((prevCart) => prevCart.filter((item) => item.id !== id));
 	};
 
-	const getTotalItems = () => {
-		return cart.length;
-	};
+	const getTotalItems = () => cart.length;
 
 	return (
 		<CartContext.Provider

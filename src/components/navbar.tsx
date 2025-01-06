@@ -39,6 +39,8 @@ const NavItems = [
 
 export function Navbar() {
 	const { cart } = useCart();
+	const cartItemCount = cart.length;
+	const isCartEmpty = cart.length == 0;
 	const [isOpen, setIsOpen] = React.useState(false);
 	// const [cartItemCount, setCartItemCount] = React.useState(cart.length); // Example cart item count
 
@@ -140,11 +142,17 @@ export function Navbar() {
 						</DropdownMenuContent>
 					</DropdownMenu>
 					<Button variant="ghost" size="icon" className="relative">
-						<ShoppingCart className="h-5 w-5" />
-						<span className="sr-only">Open cart</span>
-						<span className="absolute right-0 top-0 h-4 w-4 rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
-							{cart.length}
-						</span>
+						<Link href="/cart">
+							<ShoppingCart className="h-5 w-5" />
+							<span className="sr-only">Open cart</span>
+							<span
+								className={`absolute right-0 top-0 h-4 w-4 rounded-full bg-primary text-[10px] font-bold text-primary-foreground
+								${isCartEmpty ? "hidden" : ""}	
+									`}
+							>
+								{cartItemCount}
+							</span>
+						</Link>
 					</Button>
 					<ModeToggle />
 				</div>

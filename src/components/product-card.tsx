@@ -1,9 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Eye } from "lucide-react";
+import { Eye, ShoppingCart, X } from "lucide-react";
 import {
 	Dialog,
 	DialogContent,
@@ -25,11 +24,13 @@ interface Product {
 interface ProductCardProps {
 	product: Product;
 	onAddToCart: (productId: string) => void;
+	isInCart: boolean;
 }
 
 export default function ProductCard({
 	product,
 	onAddToCart,
+	isInCart,
 }: ProductCardProps) {
 	const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
@@ -93,25 +94,37 @@ export default function ProductCard({
 									setIsQuickViewOpen(false);
 								}}
 							>
-								Add to Cart
+								{isInCart ? "Remove from Cart" : "Add to Cart"}
 							</Button>
 						</div>
 					</DialogContent>
 				</Dialog>
 			</div>
 			<div className="p-4">
-				<h3 className="text-lg font-semibold mb-2 text-gray-600">
-					{product.name}
-				</h3>
+				<h3 className="text-lg font-semibold mb-2">{product.name}</h3>
 				<p className="text-gray-600 mb-1">₹{product.price.toFixed(2)}</p>
 				<p className="text-sm text-gray-500 mb-4">
 					Color: {product.color} | Size: {product.size}
 				</p>
 				<Button
 					onClick={() => onAddToCart(product.id)}
-					className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200"
+					className={`w-full font-bold py-2 px-4 rounded transition-colors duration-200 ${
+						isInCart
+							? "bg-red-600 hover:bg-red-700 text-white"
+							: "bg-blue-600 hover:bg-blue-700 text-white"
+					}`}
 				>
-					Add to Cart
+					{isInCart ? (
+						<>
+							<X className="w-4 h-4 mr-2" />
+							Remove from Cart
+						</>
+					) : (
+						<>
+							<ShoppingCart className="w-4 h-4 mr-2" />
+							Add to Cart
+						</>
+					)}
 				</Button>
 			</div>
 		</div>

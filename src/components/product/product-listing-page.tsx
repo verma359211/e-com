@@ -25,102 +25,127 @@ import { Product } from "@/types";
 
 
 // Dummy t-shirt products data
+
 const dummyProducts: Product[] = [
 	{
 		id: "1",
 		name: "Classic White Tee",
 		price: 499,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "White",
 		size: "M",
+		quantity: 1,
 	},
 	{
 		id: "2",
 		name: "Vintage Black T-Shirt",
 		price: 599,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Black",
 		size: "L",
+		quantity: 1,
 	},
 	{
 		id: "3",
 		name: "Graphic Print Tee",
 		price: 699,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Gray",
 		size: "S",
+		quantity: 1,
 	},
 	{
 		id: "4",
 		name: "Striped Sailor Shirt",
 		price: 799,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Blue/White",
 		size: "XL",
+		quantity: 1,
 	},
 	{
 		id: "5",
 		name: "V-Neck Red T-Shirt",
 		price: 549,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Red",
 		size: "M",
+		quantity: 1,
 	},
 	{
 		id: "6",
 		name: "Eco-Friendly Green Tee",
 		price: 899,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Green",
 		size: "L",
+		quantity: 1,
 	},
 	{
 		id: "7",
 		name: "Retro Band T-Shirt",
 		price: 749,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Black",
 		size: "S",
+		quantity: 1,
 	},
 	{
 		id: "8",
 		name: "Sports Team Jersey",
 		price: 999,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Red/White",
 		size: "XL",
+		quantity: 1,
 	},
 	{
 		id: "9",
 		name: "Tie-Dye Summer Tee",
 		price: 649,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Multi",
 		size: "M",
+		quantity: 1,
 	},
 	{
 		id: "10",
 		name: "Minimalist Logo Shirt",
 		price: 579,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Navy",
 		size: "L",
+		quantity: 1,
 	},
 	{
 		id: "11",
 		name: "Pocket Detail T-Shirt",
 		price: 629,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Beige",
 		size: "S",
+		quantity: 1,
 	},
 	{
 		id: "12",
 		name: "Long Sleeve Henley",
 		price: 849,
-		image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		image:
+			"https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		color: "Burgundy",
 		size: "M",
+		quantity: 1,
 	},
 ];
 
@@ -134,7 +159,18 @@ export default function ProductListingPage() {
 		Math.ceil(dummyProducts.length / productsPerPage)
 	);
 
-	const { addToCart } = useCart();
+	const { cart, addToCart, removeFromCart } = useCart();
+	const handleAddToCart = (Product: Product) => {
+		if (cart.some((item) => item.id === Product.id)) {
+			removeFromCart(Product.id);
+		} else {
+			addToCart(Product);
+		}
+	}
+
+	const isIncart = (id: string) => {
+		return cart.some((item) => item.id === id);
+	};
 
 	const indexOfLastProduct = currentPage * productsPerPage;
 	const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -142,7 +178,6 @@ export default function ProductListingPage() {
 		indexOfFirstProduct,
 		indexOfLastProduct
 	);
-
 	return (
 		<div className="container mx-auto px-4 py-8">
 			<header className="mb-8">
@@ -194,7 +229,9 @@ export default function ProductListingPage() {
 							<ProductCard
 								key={product.id}
 								product={product}
-								onAddToCart={() => addToCart(product)}
+								onAddToCart={() => handleAddToCart(product)}
+								isInCart={isIncart(product.id)}
+								// isInCart={cart.includes(product)}
 							/>
 						))}
 					</div>

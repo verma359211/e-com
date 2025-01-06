@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-import { ShootingStarsAndStarsBackgroundDemo } from "@/components/background";
+// import { ShootingStarsAndStarsBackgroundDemo } from "@/components/background";
 import { CartProvider } from "@/context/CartContext";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -39,7 +39,7 @@ export default function RootLayout({
 						enableSystem
 						disableTransitionOnChange
 					>
-						<ShootingStarsAndStarsBackgroundDemo />
+						{/* <ShootingStarsAndStarsBackgroundDemo /> */}
 						<Navbar />
 						{children}
 						<Footer />
