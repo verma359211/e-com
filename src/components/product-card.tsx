@@ -35,7 +35,7 @@ export default function ProductCard({
 	const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
 
 	return (
-		<div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+		<div className="rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
 			<div className="relative">
 				<Image
 					src={product.image}
@@ -74,14 +74,14 @@ export default function ProductCard({
 							<div className="grid grid-cols-2 gap-4">
 								<div>
 									<p className="text-sm font-medium">Color</p>
-									<p className="text-sm text-gray-500">{product.color}</p>
+									<p className="text-sm">{product.color}</p>
 								</div>
 								<div>
 									<p className="text-sm font-medium">Size</p>
-									<p className="text-sm text-gray-500">{product.size}</p>
+									<p className="text-sm">{product.size}</p>
 								</div>
 							</div>
-							<p className="text-sm text-gray-500">
+							<p className="text-sm">
 								This comfortable {product.color} t-shirt is perfect for everyday
 								wear. Made with high-quality cotton for a soft feel and lasting
 								durability.
@@ -102,8 +102,8 @@ export default function ProductCard({
 			</div>
 			<div className="p-4">
 				<h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-				<p className="text-gray-600 mb-1">₹{product.price.toFixed(2)}</p>
-				<p className="text-sm text-gray-500 mb-4">
+				<p className=" mb-1">₹{product.price.toFixed(2)}</p>
+				<p className="text-sm mb-4">
 					Color: {product.color} | Size: {product.size}
 				</p>
 				<Button
