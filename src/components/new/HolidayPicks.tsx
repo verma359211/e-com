@@ -14,8 +14,8 @@ const HolidayPicks = () => {
 						<Image
 							src="https://i.pinimg.com/736x/06/0a/4f/060a4fa1e947c69d1111af689f6a0b1a.jpg"
 							alt="Stack of sweaters"
-							layout="fill"
-							objectFit="cover"
+							fill
+							className="object-cover"
 						/>
 					</div>
 					<p className="text-sm text-gray-600">
@@ -36,8 +36,8 @@ const HolidayPicks = () => {
 						<Image
 							src="https://i.pinimg.com/736x/b1/cc/d9/b1ccd9d755c3c6320e6e764e71da953f.jpg"
 							alt="Organic cotton field"
-							layout="fill"
-							objectFit="cover"
+							fill
+							className="object-cover"
 						/>
 					</div>
 					<p className="text-sm text-gray-600">

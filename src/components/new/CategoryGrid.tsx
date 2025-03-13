@@ -54,9 +54,8 @@ const CategoryGrid = () => {
 								<Image
 									src={category.image}
 									alt={category.name}
-									layout="fill"
-									objectFit="cover"
-									className="group-hover:scale-105 transition-transform duration-300"
+									fill
+									className="object-cover group-hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
 							<span className="text-sm uppercase tracking-wide">

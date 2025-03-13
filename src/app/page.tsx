@@ -1,6 +1,5 @@
 // pages/index.tsx
 // import { useState, useEffect } from "react";
-import Head from "next/head";
 import Hero from "@/components/new/Hero";
 import CategoryGrid from "@/components/new/CategoryGrid";
 import FeaturedSections from "@/components/new/FeaturedSections";

@@ -8,8 +8,8 @@ const MissionSection = () => {
 			<Image
 				src="https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 				alt="Sustainable farming"
-				layout="fill"
-				objectFit="cover"
+				fill
+				className="object-cover"
 			/>
 			<div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
 				<h2 className="text-2xl md:text-3xl text-white font-light mb-4">

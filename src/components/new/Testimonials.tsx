@@ -73,8 +73,8 @@ const Testimonials = () => {
 						<Image
 							src={testimonials[currentTestimonial].image}
 							alt="Product testimonial"
-							layout="fill"
-							objectFit="cover"
+							fill
+							className="object-cover"
 						/>
 					</div>
 				</div>
