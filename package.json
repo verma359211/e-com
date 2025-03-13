@@ -24,7 +24,7 @@
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-switch": "^1.1.2",
     "@radix-ui/react-toast": "^1.2.6",
-    "@react-email/components": "0.0.32",
+    "@react-email/components": "^0.0.13",
     "@tabler/icons-react": "^3.28.1",
     "ai": "^4.1.26",
     "axios": "^1.7.9",
@@ -64,7 +64,7 @@
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.5",
     "postcss": "^8.5.1",
-    "react-email": "3.0.6",
+    "react-email": "^1.2.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.7.3"
   }

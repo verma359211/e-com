@@ -4,8 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 // import { ShootingStarsAndStarsBackgroundDemo } from "@/components/background";
 // import { CartProvider } from "@/context/CartContext";
-import { Navbar } from "@/components/navbar";
-import Footer from "@/components/footer";
+// import { Navbar } from "@/components/navbar";
+// import Footer from "@/components/footer";
 
 import { Providers } from "@/context/providers";
 
@@ -36,9 +36,9 @@ export default function RootLayout({
 			>
 				<Providers>
 					{/* <ShootingStarsAndStarsBackgroundDemo /> */}
-					<Navbar />
+					{/* <Navbar /> */}
 					{children}
-					<Footer />
+					{/* <Footer /> */}
 				</Providers>	
 				</body>
 		</html>
